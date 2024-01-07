@@ -1,0 +1,94 @@
+list = []
+
+user_input = input("Right(Weapons) / Left(Armor)")
+#-------------------------------------------( for right one)-----------------------------------------
+
+if user_input.lower() == "right":
+    list.append("Weapon")
+    print(list)
+
+    choose = input("Right(Machine Gun) / Left(Pistol)")
+    if choose == "right":
+        list.append("Machine Gun")
+        print(list)
+
+        choose = input("Striaght(Medkit)")
+        if choose == "striaght":
+            list.append("Medkit")
+
+            choice = input("Right/Left")
+            if choice == "right":
+                print(list)
+                print("Congratulation! You won without been caught")
+            elif choice == "left":
+                print(list)
+                print("Alas! You lose and caught by snakes")
+        else:
+            print("Invalid move")
+    elif choose == "left":
+        list.append("Pistol")
+        print(list)
+        
+        choose = input("Striaght(Medkit)")
+        if choose == "striaght":
+            list.append("Medkit")
+            print(list)
+
+            choice = input("Right/Left")
+            if choice == "right":
+                print(list)
+                print("Alas! You lose and caught by lions")
+            elif choice == "left":
+                print(list)
+                print("Alas! You lose and caught by scorpions")
+
+        else:
+            print("Invalid move")
+            print(list)
+#-------------------------------------------( for left one)-----------------------------------------
+elif user_input.lower() == "left":
+    list.append("Armor")
+    print(list)
+
+    choose = input("Right(Medicine) / Left(Shield)")
+    if choose == "right":
+        list.append("Medicine")
+        print(list)
+        
+        choose = input("Striaght(Medkit)")
+        if choose == "striaght":
+            list.append("Medkit")
+            print(list)
+            
+            choice = input("Right/Left")
+            if choice == "right":
+                print(list)
+                print("Alas! You lose and caught by worms")
+            elif choice == "left":
+                print(list)
+                print("Alas! You lose and caught by wolfs")
+        else:
+            print("Invalid move")
+            print(list)
+    elif choose == "left":
+        list.append("Shield")
+        print(list)
+        
+        choose = input("Striaght(Medkit)")
+        if choose == "striaght":
+            list.append("Medkit")
+            print(list)
+
+            choice = input("Right/Left")
+            if choice == "right":
+                print(list)
+                print("Congratulation! You won without been caught")
+            elif choice == "left":
+                print(list)
+                print("Alas! You lose and caught by cheetahs")
+
+        else:
+            print("Invalid move")
+            print(list)
+else:
+    print("Invalid Movement")
