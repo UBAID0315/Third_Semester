@@ -1,0 +1,44 @@
+from datetime import datetime
+import calendar
+
+def chatbot():
+# ------------------------------------------------------------------------------
+    user_input = input("Enter your question you want to ask: ")
+    
+    response(user_input)
+
+#--------------------------------------------------------------------------------
+def response(user_input):
+
+    if user_input.lower() == "tell me the date today":
+        today = datetime.today()
+        print("Today date is: ",today)
+    elif user_input.lower() == "tell me the time":
+        time = datetime.now()
+        print("Present time is: ",time)
+    elif user_input.lower() == "what is the day today":
+        day = calendar.day_name[datetime.now()]
+        print("Today is: ",day)
+    elif user_input.lower() == "give me the info about ai":
+        print("AI is stands for Artificial Intelligence.\nIt is the study of give the brain of humans\nto the machine through coding")
+    elif user_input.lower() == "bye" or "exit":
+        print("THANK YOU!")
+
+
+data = ["Tell me the date today","Tell me the time",
+        "Give me the info about AI","bye","exit",
+        "What is the day today"
+        ]
+
+
+name = input("Please enter your name: ")
+print(f"Hello {name}, how may i assist you?")
+chatbot()
+
+while True:
+    choose = input("Do you want more help?")
+    if choose.lower() == "yes":
+        chatbot()
+    else:
+        print("I am happy to help you :)")
+        break
